@@ -11,12 +11,17 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Minimalist stylized widgets for diverse use.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Some stylized widgets:
+
+* Text fields;
+* Buttons;
+* App Bars;
+* Cards;
+* and others...
 
 ## Getting started
 
@@ -25,15 +30,22 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+You can use this package in any flutter project.
 
 ```dart
-const like = 'sample';
+import 'package:minimalist_components/minimalist_components.dart';
+
+...
+
+MinimalistButton(
+  child: const Text('Next page'),
+  onPressed: () => Navigator.push(
+    context,
+    MinimalistAnimatedPageRoute.slide(
+      screen: const PageTwo(),
+    ),
+  ),
+),
+
+...
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
